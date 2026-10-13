@@ -1,0 +1,6 @@
+{
+  "name": "FC Bayern Munich Editorial & SEO Hub",
+  "description": "Comprehensive FC Bayern Munich editorial platform featuring 10 in-depth articles, AEO-structured Q&As, Allianz Arena matchday guides, and live on-page SEO keyword research auditing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
