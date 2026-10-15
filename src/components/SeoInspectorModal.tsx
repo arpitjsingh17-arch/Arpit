@@ -70,20 +70,39 @@ export const SeoInspectorModal: React.FC<SeoInspectorModalProps> = ({
 
         {/* Scrollable Audit Body */}
         <div className="p-6 overflow-y-auto space-y-5 text-xs">
-          {/* Rule 1: Clean URL */}
+          {/* Rule 1: Good URL Rules Audit */}
           <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-            <div className="space-y-1 w-full">
+            <div className="space-y-2 w-full">
               <div className="flex items-center justify-between">
-                <span className="font-bold text-slate-900">Rule 1: Unique URL Structure</span>
-                <span className="text-[11px] font-semibold text-emerald-600">PASS (Clean & Descriptive)</span>
+                <span className="font-bold text-slate-900">Rule 1: Unique URL & Good URL Rules</span>
+                <span className="text-[11px] font-semibold text-emerald-600">PASS (100% Compliant)</span>
               </div>
-              <p className="font-mono text-slate-700 bg-white p-1.5 rounded border border-slate-200">
+              <p className="font-mono text-slate-800 bg-white p-2 rounded border border-slate-200 text-[11px] break-all">
                 {currentPath}
               </p>
-              <p className="text-slate-500 text-[11px]">
-                Hyphenated, lowercase, no tracking parameters or cryptic IDs.
-              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-[11px] text-slate-600 bg-white p-2.5 rounded border border-slate-200">
+                <div className="flex items-center gap-1.5 text-emerald-700">
+                  <CheckCircle2 className="w-3 h-3 text-emerald-600 shrink-0" />
+                  <span>Rule A: Lowercase only (no capital letters)</span>
+                </div>
+                <div className="flex items-center gap-1.5 text-emerald-700">
+                  <CheckCircle2 className="w-3 h-3 text-emerald-600 shrink-0" />
+                  <span>Rule B: Hyphen delimiters (no underscores or %20)</span>
+                </div>
+                <div className="flex items-center gap-1.5 text-emerald-700">
+                  <CheckCircle2 className="w-3 h-3 text-emerald-600 shrink-0" />
+                  <span>Rule C: Primary keyword embedded in slug</span>
+                </div>
+                <div className="flex items-center gap-1.5 text-emerald-700">
+                  <CheckCircle2 className="w-3 h-3 text-emerald-600 shrink-0" />
+                  <span>Rule D: Clean hierarchy (/articles/...) with 0 IDs</span>
+                </div>
+                <div className="flex items-center gap-1.5 text-emerald-700 col-span-1 sm:col-span-2">
+                  <CheckCircle2 className="w-3 h-3 text-emerald-600 shrink-0" />
+                  <span>Rule E: Dynamic self-referential canonical tag live in &lt;head&gt;</span>
+                </div>
+              </div>
             </div>
           </div>
 

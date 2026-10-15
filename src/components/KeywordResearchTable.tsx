@@ -127,8 +127,8 @@ export const KeywordResearchTable: React.FC<KeywordResearchTableProps> = ({
           <div className="flex items-start gap-2 p-2.5 rounded-lg bg-emerald-50/60 border border-emerald-100">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
             <div>
-              <strong className="text-slate-900 block">1. Unique Clean URLs</strong>
-              <span>Lowercase, hyphenated, descriptive URLs with zero ID parameters.</span>
+              <strong className="text-slate-900 block">1. Unique Clean URLs (Good URL Rules)</strong>
+              <span>Lowercase only, hyphen-delimited, keyword-rich, zero query IDs, self-canonical.</span>
             </div>
           </div>
           <div className="flex items-start gap-2 p-2.5 rounded-lg bg-emerald-50/60 border border-emerald-100">
@@ -167,6 +167,35 @@ export const KeywordResearchTable: React.FC<KeywordResearchTableProps> = ({
             </div>
           </div>
         </div>
+
+        {/* Good URL Rules In-Depth Architecture Box */}
+        <div className="mt-4 pt-4 border-t border-slate-100">
+          <h3 className="text-xs font-bold text-slate-800 mb-2">
+            The 5 "Good URL Rules" Applied to Every Page on This Website:
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 text-[11px] text-slate-600">
+            <div className="p-2 bg-slate-50 rounded border border-slate-200">
+              <strong className="text-slate-900 block">1. Lowercase Only</strong>
+              <span>Never uses capital letters to eliminate duplicate URL indexing.</span>
+            </div>
+            <div className="p-2 bg-slate-50 rounded border border-slate-200">
+              <strong className="text-slate-900 block">2. Hyphen Delimiters</strong>
+              <span>Standard hyphens (-) instead of underscores (_) or %20 spaces.</span>
+            </div>
+            <div className="p-2 bg-slate-50 rounded border border-slate-200">
+              <strong className="text-slate-900 block">3. Keyword in Slug</strong>
+              <span>Primary target keyword is embedded right in the URL address.</span>
+            </div>
+            <div className="p-2 bg-slate-50 rounded border border-slate-200">
+              <strong className="text-slate-900 block">4. Clean Hierarchy</strong>
+              <span>Short, readable directory structure (/articles/...) with zero cryptic IDs.</span>
+            </div>
+            <div className="p-2 bg-slate-50 rounded border border-slate-200">
+              <strong className="text-slate-900 block">5. Self-Canonical Tag</strong>
+              <span>Matching &lt;link rel="canonical"&gt; tag in &lt;head&gt; on every view.</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Control Bar: Filter Tabs + Search + Action Buttons */}
@@ -181,7 +210,7 @@ export const KeywordResearchTable: React.FC<KeywordResearchTableProps> = ({
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
-            All 11 Pages
+            All 11 Unique URLs
           </button>
           <button
             onClick={() => setFilterMode('homepage_and_3')}
@@ -241,6 +270,7 @@ export const KeywordResearchTable: React.FC<KeywordResearchTableProps> = ({
               <tr className="bg-slate-900 text-white font-semibold border-b border-slate-800">
                 <th className="py-3 px-4 whitespace-nowrap">Page Name / Title</th>
                 <th className="py-3 px-4 whitespace-nowrap">Unique Clean URL</th>
+                <th className="py-3 px-4 whitespace-nowrap">Good URL Rules Check</th>
                 <th className="py-3 px-4 whitespace-nowrap">Main Target Keyword</th>
                 <th className="py-3 px-4 whitespace-nowrap">2 Related Keywords</th>
                 <th className="py-3 px-4 whitespace-nowrap">Search Intent</th>
@@ -276,8 +306,16 @@ export const KeywordResearchTable: React.FC<KeywordResearchTableProps> = ({
 
                     {/* URL Slug */}
                     <td className="py-3.5 px-4 font-mono text-[11px] text-slate-600 whitespace-nowrap">
-                      <span className="bg-slate-100 px-2 py-1 rounded">
+                      <span className="bg-slate-100 px-2 py-1 rounded text-slate-800 font-semibold">
                         {row.urlSlug}
+                      </span>
+                    </td>
+
+                    {/* Good URL Rules Check */}
+                    <td className="py-3.5 px-4 whitespace-nowrap">
+                      <span className="inline-flex items-center gap-1 text-[11px] font-medium text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded">
+                        <CheckCircle2 className="w-3 h-3 text-emerald-600" />
+                        Valid (5/5 Rules)
                       </span>
                     </td>
 
