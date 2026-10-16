@@ -166,9 +166,9 @@ export const ARTICLES: Article[] = [
       name: 'Stefan Brandl',
       role: 'Bavarian Matchday Operations Analyst',
     },
-    image: '/src/assets/images/bayern_allianz_arena_dusk_1791884292295.jpg',
-    imageAlt: 'Allianz Arena stadium in Munich glowing luminous red against a twilight Bavarian sky',
-    imageCaption: 'The iconic 75,000-capacity Allianz Arena illuminated in club red in northern Munich.',
+    image: '/src/assets/images/bayern_pitchside_allianz_1792118504331.jpg',
+    imageAlt: 'Pitchside dugout at the Allianz Arena with Mia San Mia embossed on the red team seats and illuminated stadium bowl',
+    imageCaption: 'Pitchside at the Allianz Arena showing the iconic Mia San Mia team dugout and the 75,000-seat bowl.',
     quickAnswerSummary: 'To attend a match at Allianz Arena, take Munich U-Bahn line U6 directly north to Fröttmaning station (16 minutes from Marienplatz). Enter through the Esplanade, use cashless payment inside, and arrive at least 90 minutes prior to kickoff.',
     sections: [
       {
@@ -256,9 +256,9 @@ export const ARTICLES: Article[] = [
       name: 'Maximilian Huber',
       role: 'Cultural Historian & Sports Sociologist',
     },
-    image: '/src/assets/images/bayern_fans_mia_san_mia_1792117789869.jpg',
-    imageAlt: 'Bavarian supporters in the Südkurve proudly holding red scarves displaying the Mia San Mia club motto',
-    imageCaption: 'The Bavarian faithful embodying the spirit of "Mia San Mia" in the Allianz Arena stands.',
+    image: '/src/assets/images/bayern_marienplatz_title_crowd_1792118523682.jpg',
+    imageAlt: 'Thousands of passionate Bayern Munich supporters in red kits raising scarves at Munich Marienplatz celebrating club titles',
+    imageCaption: 'The Bavarian faithful celebrating club glory at the historic Marienplatz town hall in Munich.',
     quickAnswerSummary: '"Mia San Mia" is a Bavarian dialect phrase translating to "We are who we are" (or "We are we"). For FC Bayern Munich, it signifies supreme self-confidence, unshakeable resilience under pressure, familial solidarity, and an unyielding expectation of victory.',
     sections: [
       {
@@ -346,9 +346,9 @@ export const ARTICLES: Article[] = [
       name: 'Felix Sommer',
       role: 'Head of Match Analysis & UEFA Pro Analyst',
     },
-    image: '/src/assets/images/bayern_tactics_4231_board_1792117769544.jpg',
-    imageAlt: 'Tactical football strategy board with geometric player pitch formations, tactical markers, and 4-2-3-1 pressing instructions',
-    imageCaption: 'The strategic blueprint governing FC Bayern Munich modern 4-2-3-1 possession and counter-pressing game.',
+    image: '/src/assets/images/bayern_allianz_dressing_room_1792118472555.jpg',
+    imageAlt: 'The official FC Bayern Munich home dressing room inside the Allianz Arena with players red jerseys and illuminated club crest',
+    imageCaption: 'Inside the inner sanctum: The FC Bayern Munich home locker room at the Allianz Arena.',
     quickAnswerSummary: 'Bayern Munich operates primarily in a fluid 4-2-3-1 attacking structure that mutates into a 3-2-5 or 2-3-5 in possession, characterized by an ultra-high defensive line, aggressive Gegenpressing within 5 seconds of turnover, and rapid vertical line-breaking passes.',
     sections: [
       {
@@ -708,9 +708,9 @@ export const ARTICLES: Article[] = [
       name: 'Dr. Florian Eder',
       role: 'Academy scout & Sports Science Specialist',
     },
-    image: '/src/assets/images/bayern_youth_campus_pitches_1792117770666.jpg',
-    imageAlt: 'Modern state-of-the-art youth training pitches and academy mini-stadium at the 30-hectare FC Bayern Campus under Bavarian skies',
-    imageCaption: 'The 30-hectare FC Bayern Campus youth development complex located in northern Munich.',
+    image: '/src/assets/images/bayern_sabener_headquarters_1792118473430.jpg',
+    imageAlt: 'The iconic Säbener Straße training facility and headquarters of FC Bayern München with practice pitches and team banners',
+    imageCaption: 'The historic Säbener Straße training facility where generations of Bayern Munich stars hone their craft.',
     quickAnswerSummary: 'Opened in August 2017 with an investment of €70 million, the FC Bayern Campus is a state-of-the-art 30-hectare youth academy complex housing eight pitches, a 2,500-seat stadium, and world-class biomechanical training facilities for ages U9 through U19.',
     sections: [
       {
