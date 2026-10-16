@@ -1,6 +1,6 @@
 import React from 'react';
 import { Article } from '../data/articles';
-import { ArrowUpRight, Clock, User, KeyRound, HelpCircle } from 'lucide-react';
+import { ArrowUpRight, BookOpen } from 'lucide-react';
 
 interface ArticleCardProps {
   article: Article;
@@ -50,29 +50,16 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, onSelectArtic
           </a>
         </h2>
 
-        {/* Excerpt / AEO summary preview */}
+        {/* Excerpt */}
         <p className="text-sm text-slate-600 line-clamp-3 leading-relaxed mb-4 flex-1">
           {article.quickAnswerSummary}
         </p>
 
-        {/* On-Page SEO Keywords audit badge */}
-        <div className="pt-3 border-t border-slate-100 space-y-1.5 mb-4 text-xs">
-          <div className="flex items-center gap-1.5 text-slate-700">
-            <KeyRound className="w-3.5 h-3.5 text-[#DC052D] shrink-0" />
-            <span className="font-medium text-slate-500">Main Keyword:</span>
-            <span className="font-semibold text-slate-900 truncate">{article.primaryKeyword}</span>
-          </div>
-          <div className="flex items-center gap-1.5 text-slate-500 pl-5 truncate">
-            <span>Related:</span>
-            <span className="truncate">{article.secondaryKeywords[0]} · {article.secondaryKeywords[1]}</span>
-          </div>
-        </div>
-
         {/* CTA with descriptive anchor text */}
         <div className="pt-2 flex items-center justify-between">
           <span className="text-xs text-slate-400 flex items-center gap-1">
-            <HelpCircle className="w-3.5 h-3.5" />
-            {article.sections.length} AEO Q&A Chapters
+            <BookOpen className="w-3.5 h-3.5" />
+            {article.sections.length} Chapters
           </span>
 
           <a

@@ -3,20 +3,12 @@ import { Article } from '../data/articles';
 import {
   ChevronLeft,
   Share2,
-  Bookmark,
   CheckCircle2,
   HelpCircle,
-  KeyRound,
   FileText,
-  Clock,
-  Calendar,
-  User,
   ArrowRight,
   Sparkles,
-  ExternalLink,
-  ChevronDown,
-  Info,
-  Globe
+  ChevronDown
 } from 'lucide-react';
 
 interface ArticleViewProps {
@@ -33,7 +25,6 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
   const [activeSectionId, setActiveSectionId] = useState<string>(article.sections[0]?.id || '');
   const [copiedLink, setCopiedLink] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
-  const [showSeoMetaCard, setShowSeoMetaCard] = useState(true);
 
   // Sync document title and meta description dynamically
   useEffect(() => {
@@ -118,119 +109,6 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
 
       {/* Article Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-        {/* On-Page SEO Strategy & Keyword Transparency Panel */}
-        <section aria-label="On-Page SEO Information" className="mb-8 bg-white rounded-xl border border-slate-200/90 shadow-xs overflow-hidden">
-          <div
-            className="flex items-center justify-between p-4 bg-slate-50/80 border-b border-slate-200 cursor-pointer"
-            onClick={() => setShowSeoMetaCard(!showSeoMetaCard)}
-          >
-            <div className="flex items-center gap-2.5">
-              <KeyRound className="w-4 h-4 text-[#DC052D]" />
-              <h2 className="text-sm font-bold text-slate-900 tracking-tight">
-                On-Page SEO Target Metadata & Keywords (Assignment Verification)
-              </h2>
-            </div>
-            <div className="flex items-center gap-2 text-xs text-slate-500">
-              <span>{showSeoMetaCard ? 'Collapse' : 'Expand Details'}</span>
-              <ChevronDown className={`w-4 h-4 transition-transform ${showSeoMetaCard ? 'rotate-180' : ''}`} />
-            </div>
-          </div>
-
-          {showSeoMetaCard && (
-            <div className="p-5 space-y-4 text-xs bg-white">
-              {/* URL & Good URL Rules Audit */}
-              <div className="p-3.5 bg-slate-50 rounded-lg border border-slate-200 space-y-2">
-                <div className="flex flex-wrap items-center justify-between gap-2">
-                  <div className="flex items-center gap-1.5 font-bold text-slate-900">
-                    <Globe className="w-3.5 h-3.5 text-emerald-600" />
-                    <span>Unique URL & Good URL Rules Verification:</span>
-                  </div>
-                  <span className="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded">
-                    100% Rules Compliant
-                  </span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <code className="bg-white border border-slate-200 px-2.5 py-1 rounded font-mono text-[11px] text-slate-800 break-all flex-1">
-                    /articles/{article.slug}
-                  </code>
-                  <button
-                    onClick={handleCopyShareUrl}
-                    className="px-2.5 py-1 bg-slate-900 text-white rounded font-medium hover:bg-slate-800 transition-colors shrink-0 cursor-pointer"
-                  >
-                    {copiedLink ? 'Copied' : 'Copy'}
-                  </button>
-                </div>
-                {/* 5 Good URL Rules Checklist */}
-                <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 pt-1 text-[11px] text-slate-600">
-                  <span className="flex items-center gap-1 text-emerald-700">
-                    <CheckCircle2 className="w-3 h-3 text-emerald-600" /> Lowercase only
-                  </span>
-                  <span className="flex items-center gap-1 text-emerald-700">
-                    <CheckCircle2 className="w-3 h-3 text-emerald-600" /> Hyphen separators
-                  </span>
-                  <span className="flex items-center gap-1 text-emerald-700">
-                    <CheckCircle2 className="w-3 h-3 text-emerald-600" /> Primary keyword in slug
-                  </span>
-                  <span className="flex items-center gap-1 text-emerald-700">
-                    <CheckCircle2 className="w-3 h-3 text-emerald-600" /> No query parameters
-                  </span>
-                  <span className="flex items-center gap-1 text-emerald-700">
-                    <CheckCircle2 className="w-3 h-3 text-emerald-600" /> Canonical tag live
-                  </span>
-                </div>
-              </div>
-
-              {/* Keywords & Intent Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-                <div className="space-y-1">
-                  <span className="text-slate-400 uppercase tracking-wider font-semibold">Primary Main Keyword:</span>
-                  <p className="font-semibold text-slate-900 bg-red-50 text-[#DC052D] border border-red-100 p-2 rounded-md">
-                    "{article.primaryKeyword}"
-                  </p>
-                </div>
-
-                <div className="space-y-1">
-                  <span className="text-slate-400 uppercase tracking-wider font-semibold">2 Related Secondary Keywords:</span>
-                  <div className="bg-slate-50 border border-slate-200 p-2 rounded-md text-slate-700 space-y-0.5">
-                    <p>1. {article.secondaryKeywords[0]}</p>
-                    <p>2. {article.secondaryKeywords[1]}</p>
-                  </div>
-                </div>
-
-                <div className="space-y-1">
-                  <span className="text-slate-400 uppercase tracking-wider font-semibold">Search Intent & Word Count:</span>
-                  <div className="bg-slate-50 border border-slate-200 p-2 rounded-md text-slate-700">
-                    <p className="font-medium text-slate-800">Intent: {article.searchIntent}</p>
-                    <p className="text-slate-500">Actual: {article.actualWordCount} words (Target: {article.targetWordCount})</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Title and Meta description */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
-                <div className="space-y-1">
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-400 uppercase tracking-wider font-semibold">SEO Title Tag ({article.seoTitle.length} chars):</span>
-                    <span className="text-[11px] text-emerald-600 font-medium">Rule Compliant (50–60 chars)</span>
-                  </div>
-                  <p className="text-slate-800 bg-slate-50 p-2 rounded-md border border-slate-200 font-mono text-[11px]">
-                    {article.seoTitle}
-                  </p>
-                </div>
-
-                <div className="space-y-1">
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-400 uppercase tracking-wider font-semibold">Meta Description ({article.metaDescription.length} chars):</span>
-                    <span className="text-[11px] text-emerald-600 font-medium">Rule Compliant (140–160 chars)</span>
-                  </div>
-                  <p className="text-slate-800 bg-slate-50 p-2 rounded-md border border-slate-200 font-mono text-[11px]">
-                    {article.metaDescription}
-                  </p>
-                </div>
-              </div>
-            </div>
-          )}
-        </section>
 
         {/* Main Article Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
@@ -253,11 +131,11 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
                 {article.title}
               </h1>
 
-              {/* AEO Featured Snippet Callout (Answer Engine Optimization) */}
+              {/* Key Takeaway Featured Snippet Callout */}
               <div className="p-5 mb-8 bg-slate-50 rounded-xl border border-slate-200">
                 <div className="flex items-center gap-2 text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">
                   <Sparkles className="w-4 h-4 text-[#DC052D]" />
-                  <span>AEO Quick Answer & Direct Summary</span>
+                  <span>Key Takeaway & Direct Overview</span>
                 </div>
                 <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-medium">
                   {article.quickAnswerSummary}
@@ -283,7 +161,7 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
               <div className="p-5 mb-10 bg-slate-50 rounded-xl border border-slate-200">
                 <h2 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-3 flex items-center gap-2">
                   <FileText className="w-4 h-4 text-[#DC052D]" />
-                  <span>In This Article (Question & Answer Table of Contents)</span>
+                  <span>In This Article (Table of Contents)</span>
                 </h2>
                 <nav className="space-y-2">
                   {article.sections.map((section, idx) => (
@@ -301,7 +179,7 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
                     className="block text-xs sm:text-sm text-slate-700 hover:text-[#DC052D] transition-colors leading-relaxed"
                   >
                     <span className="font-mono text-slate-400 mr-2">{String(article.sections.length + 1).padStart(2, '0')}.</span>
-                    Frequently Asked Questions (AEO Schema FAQs)
+                    Frequently Asked Questions
                   </a>
                 </nav>
               </div>
@@ -314,12 +192,12 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
                     id={section.id}
                     className="scroll-mt-20 pt-2"
                   >
-                    {/* H2 in Question Format for AEO */}
+                    {/* H2 in Question Format */}
                     <h2 className="text-xl sm:text-2xl font-display font-bold text-slate-900 tracking-tight leading-snug mb-3">
                       {section.question}
                     </h2>
 
-                    {/* Direct concise answer (targeted for AI Overviews / Featured Snippets) */}
+                    {/* Direct concise answer */}
                     <div className="p-4 mb-4 bg-red-50/60 rounded-lg border border-red-100 text-sm text-slate-900 leading-relaxed font-medium">
                       <span className="text-[#DC052D] font-bold mr-1">Direct Answer:</span>
                       {section.directAnswer}
@@ -345,7 +223,7 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
                 ))}
               </div>
 
-              {/* Frequently Asked Questions Section (FAQPage AEO) */}
+              {/* Frequently Asked Questions Section */}
               <section id="frequently-asked-questions" className="scroll-mt-20 mt-14 pt-8 border-t border-slate-200">
                 <div className="flex items-center gap-2 mb-4">
                   <HelpCircle className="w-5 h-5 text-[#DC052D]" />
@@ -354,7 +232,7 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
                   </h2>
                 </div>
                 <p className="text-xs text-slate-500 mb-6">
-                  Structured in question-and-answer format for AI search engines and search engine snippet extraction.
+                  Clear answers to key questions regarding this subject.
                 </p>
 
                 <div className="space-y-3">
@@ -431,8 +309,8 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
                   <dd className="text-slate-900 font-semibold mt-0.5">{article.readTime} ({article.actualWordCount} words)</dd>
                 </div>
                 <div>
-                  <dt className="text-slate-400 font-medium">AEO Subheadings</dt>
-                  <dd className="text-slate-900 font-semibold mt-0.5">{article.sections.length} Question-Answer Sections</dd>
+                  <dt className="text-slate-400 font-medium">Analytical Chapters</dt>
+                  <dd className="text-slate-900 font-semibold mt-0.5">{article.sections.length} Chapters</dd>
                 </div>
                 <div>
                   <dt className="text-slate-400 font-medium">Official Slogan</dt>
@@ -443,15 +321,8 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
 
             {/* Quick Navigation to other Bayern articles */}
             <div className="bg-white rounded-xl border border-slate-200/90 p-5 shadow-xs">
-              <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4 pb-2 border-b border-slate-100 flex items-center justify-between">
-                <span>Explore Further Studies</span>
-                <a
-                  href="/seo-keyword-research"
-                  onClick={(e) => { e.preventDefault(); onNavigate('/seo-keyword-research'); }}
-                  className="text-[#DC052D] hover:underline text-[11px] font-normal"
-                >
-                  View Keyword Table
-                </a>
+              <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4 pb-2 border-b border-slate-100">
+                Explore Further Studies
               </h3>
               <div className="space-y-3">
                 <a

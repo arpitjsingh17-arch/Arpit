@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, ShieldCheck, ArrowRight, Heart } from 'lucide-react';
+import { ArrowRight, Trophy, Heart } from 'lucide-react';
 
 interface FooterProps {
   onNavigate: (path: string) => void;
@@ -77,18 +77,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectArticle }) =
           {/* Tactical & Legends */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold text-white uppercase tracking-wider">
-              Tactics & European History
+              Tactics & Legends
             </h4>
             <ul className="space-y-2 text-xs">
-              <li>
-                <a
-                  href="/articles/bayern-munich-champions-league-titles-history"
-                  onClick={(e) => { e.preventDefault(); onSelectArticle('bayern-munich-champions-league-titles-history'); }}
-                  className="hover:text-white transition-colors"
-                >
-                  How Many Champions League Titles Has Bayern Won?
-                </a>
-              </li>
               <li>
                 <a
                   href="/articles/bayern-munich-tactical-system-pressing-formation"
@@ -116,34 +107,55 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectArticle }) =
                   Greatest Legends: Beckenbauer, Müller & Kahn
                 </a>
               </li>
+              <li>
+                <a
+                  href="/articles/der-klassiker-bayern-munich-borussia-dortmund-rivalry"
+                  onClick={(e) => { e.preventDefault(); onSelectArticle('der-klassiker-bayern-munich-borussia-dortmund-rivalry'); }}
+                  className="hover:text-white transition-colors"
+                >
+                  Der Klassiker: The Dortmund Rivalry
+                </a>
+              </li>
             </ul>
           </div>
 
-          {/* Assignment Step 2 & 3 Compliance Hub */}
+          {/* Club Heritage & Honors */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold text-white uppercase tracking-wider">
-              Assignment SEO Strategy
+              European Honors
             </h4>
             <p className="text-xs text-slate-400 leading-relaxed">
-              Engineered with clean unique URLs, primary and secondary keywords, title tag and meta description rules, and AEO question-answer structures.
+              6x European Champions and two-time continental treble winners (2013 & 2020).
             </p>
-            <div className="pt-1">
-              <a
-                href="/seo-keyword-research"
-                onClick={(e) => { e.preventDefault(); onNavigate('/seo-keyword-research'); }}
-                className="inline-flex items-center gap-1.5 px-3 py-2 bg-[#DC052D] hover:bg-[#9e0320] text-white rounded-lg text-xs font-semibold transition-colors"
-              >
-                <Table className="w-3.5 h-3.5" />
-                <span>View Complete Keyword Table</span>
-              </a>
-            </div>
+            <ul className="space-y-2 text-xs pt-1">
+              <li>
+                <a
+                  href="/articles/bayern-munich-champions-league-titles-history"
+                  onClick={(e) => { e.preventDefault(); onSelectArticle('bayern-munich-champions-league-titles-history'); }}
+                  className="hover:text-white transition-colors flex items-center gap-1.5"
+                >
+                  <span>European Cup Winners Record (6 Titles)</span>
+                  <ArrowRight className="w-3 h-3 text-[#DC052D]" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/articles/bayern-munich-2013-2020-treble-story"
+                  onClick={(e) => { e.preventDefault(); onSelectArticle('bayern-munich-2013-2020-treble-story'); }}
+                  className="hover:text-white transition-colors flex items-center gap-1.5"
+                >
+                  <span>The Story of the 2013 & 2020 Trebles</span>
+                  <ArrowRight className="w-3 h-3 text-[#DC052D]" />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div>
-            © {new Date().getFullYear()} FC Bayern Munich Editorial & SEO Knowledge Hub. All rights reserved.
+            © {new Date().getFullYear()} FC Bayern Munich Editorial Publication. All rights reserved.
           </div>
           <div className="flex items-center gap-4">
             <a
@@ -154,13 +166,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectArticle }) =
               Editorial Home
             </a>
             <span aria-hidden="true">·</span>
-            <a
-              href="/seo-keyword-research"
-              onClick={(e) => { e.preventDefault(); onNavigate('/seo-keyword-research'); }}
-              className="hover:text-slate-300 transition-colors"
-            >
-              Keyword Research Matrix
-            </a>
+            <span className="text-slate-600">Mia San Mia</span>
           </div>
         </div>
       </div>

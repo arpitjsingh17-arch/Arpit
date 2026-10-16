@@ -49,7 +49,6 @@ export const Hero: React.FC<HeroProps> = ({
         <p className="text-base sm:text-lg text-slate-300 max-w-3xl leading-relaxed mb-8">
           Explore ten publication-grade, long-form analytical studies covering Champions League triumphs,
           Allianz Arena matchday logistics, squad tactics, club legends, and 50+1 fan democracy.
-          Engineered for answer-engine clarity with structured question-answer insights.
         </p>
 
         {/* Club Statistics Strip (adjacent proof metrics) */}

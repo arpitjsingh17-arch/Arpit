@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
-import { Search, ShieldCheck, BookOpen, Table, ExternalLink, Menu, X } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Compass } from 'lucide-react';
 
 interface HeaderProps {
   currentPath: string;
   onNavigate: (path: string) => void;
-  onToggleSeoInspector: () => void;
-  isSeoInspectorOpen: boolean;
 }
 
 export const Header: React.FC<HeaderProps> = ({
   currentPath,
-  onNavigate,
-  onToggleSeoInspector,
-  isSeoInspectorOpen
+  onNavigate
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -31,7 +27,7 @@ export const Header: React.FC<HeaderProps> = ({
             href="/"
             onClick={(e) => handleLinkClick('/', e)}
             className="flex items-center gap-2.5 whitespace-nowrap shrink-0 group"
-            title="FC Bayern Munich Hub Homepage"
+            title="FC Bayern Munich Editorial Hub"
           >
             <div className="w-8 h-8 rounded-full bg-[#DC052D] flex items-center justify-center text-white font-bold text-xs tracking-wider shadow-sm group-hover:scale-105 transition-transform">
               FCB
@@ -80,36 +76,31 @@ export const Header: React.FC<HeaderProps> = ({
               Tactics
             </a>
             <a
-              href="/seo-keyword-research"
-              onClick={(e) => handleLinkClick('/seo-keyword-research', e)}
-              className={`hover:text-[#DC052D] transition-colors whitespace-nowrap shrink-0 flex items-center gap-1.5 ${
-                currentPath === '/seo-keyword-research' ? 'text-[#DC052D] font-semibold' : ''
+              href="/articles/bayern-munich-champions-league-titles-history"
+              onClick={(e) => handleLinkClick('/articles/bayern-munich-champions-league-titles-history', e)}
+              className={`hover:text-[#DC052D] transition-colors whitespace-nowrap shrink-0 ${
+                currentPath === '/articles/bayern-munich-champions-league-titles-history' ? 'text-[#DC052D] font-semibold' : ''
               }`}
             >
-              <Table className="w-3.5 h-3.5" />
-              SEO Keyword Table
+              Champions League
             </a>
           </nav>
 
           {/* Zone 3: 1 primary action */}
           <div className="flex items-center gap-3 shrink-0">
-            <button
-              onClick={onToggleSeoInspector}
-              className={`flex items-center gap-2 px-3.5 py-2 text-xs font-semibold rounded-lg transition-all whitespace-nowrap shrink-0 cursor-pointer ${
-                isSeoInspectorOpen
-                  ? 'bg-[#DC052D] text-white shadow-sm'
-                  : 'bg-slate-100 text-slate-800 hover:bg-slate-200 border border-slate-300/80'
-              }`}
-              title="Audit Title, Meta Descriptions, and Keywords on this page"
+            <a
+              href="/articles/allianz-arena-matchday-guide-munich"
+              onClick={(e) => handleLinkClick('/articles/allianz-arena-matchday-guide-munich', e)}
+              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-white bg-[#DC052D] hover:bg-[#9e0320] rounded-lg transition-colors whitespace-nowrap shrink-0 cursor-pointer shadow-xs"
             >
-              <ShieldCheck className="w-4 h-4 text-emerald-500" />
-              <span>{isSeoInspectorOpen ? 'Hide SEO Audit' : 'Audit On-Page SEO'}</span>
-            </button>
+              <Compass className="w-3.5 h-3.5" />
+              <span>Matchday Guide</span>
+            </a>
 
             {/* Mobile Hamburger */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 text-slate-600 hover:text-slate-900 rounded-lg hover:bg-slate-100"
+              className="md:hidden p-2 text-slate-600 hover:text-slate-900 rounded-lg hover:bg-slate-100 cursor-pointer"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -126,7 +117,7 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={(e) => handleLinkClick('/', e)}
             className="block py-2 text-sm font-medium text-slate-700 hover:text-[#DC052D]"
           >
-            All Articles (10 Long Studies)
+            All Articles (10 Publications)
           </a>
           <a
             href="/articles/allianz-arena-matchday-guide-munich"
@@ -150,11 +141,11 @@ export const Header: React.FC<HeaderProps> = ({
             Tactical Analysis & Formations
           </a>
           <a
-            href="/seo-keyword-research"
-            onClick={(e) => handleLinkClick('/seo-keyword-research', e)}
-            className="block py-2 text-sm font-medium text-[#DC052D] font-semibold"
+            href="/articles/bayern-munich-champions-league-titles-history"
+            onClick={(e) => handleLinkClick('/articles/bayern-munich-champions-league-titles-history', e)}
+            className="block py-2 text-sm font-medium text-slate-700 hover:text-[#DC052D]"
           >
-            Keyword Research Table & Assignment Strategy
+            Champions League History & Records
           </a>
         </div>
       )}
