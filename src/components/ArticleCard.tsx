@@ -1,6 +1,7 @@
 import React from 'react';
 import { Article } from '../data/articles';
 import { ArrowUpRight, BookOpen } from 'lucide-react';
+import { FALLBACK_IMAGE } from '../assets/images';
 
 interface ArticleCardProps {
   article: Article;
@@ -25,9 +26,13 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, onSelectArtic
         <img
           src={article.image}
           alt={article.imageAlt}
-          referrerPolicy="no-referrer"
           loading="lazy"
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          onError={(e) => {
+            const target = e.currentTarget;
+            target.onerror = null;
+            target.src = FALLBACK_IMAGE;
+          }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
       </a>

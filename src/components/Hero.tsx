@@ -1,5 +1,6 @@
 import React from 'react';
 import { Search, Trophy, MapPin, Users, Flame, BookOpen, Compass } from 'lucide-react';
+import { clubImages, FALLBACK_IMAGE } from '../assets/images';
 
 interface HeroProps {
   searchQuery: string;
@@ -23,10 +24,15 @@ export const Hero: React.FC<HeroProps> = ({
       {/* Background imagery with subtle dark scrim */}
       <div className="absolute inset-0 z-0 opacity-25 mix-blend-luminosity">
         <img
-          src="/src/assets/images/bayern_allianz_panoramic_1792117768678.jpg"
+          src={clubImages.allianzPanoramic}
           alt="Atmospheric panoramic view of the illuminated Allianz Arena in Munich"
           className="w-full h-full object-cover object-center"
           loading="eager"
+          onError={(e) => {
+            const target = e.currentTarget;
+            target.onerror = null;
+            target.src = FALLBACK_IMAGE;
+          }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#001e38] via-[#001e38]/80 to-transparent" />
       </div>

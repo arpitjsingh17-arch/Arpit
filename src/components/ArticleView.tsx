@@ -10,6 +10,7 @@ import {
   Sparkles,
   ChevronDown
 } from 'lucide-react';
+import { FALLBACK_IMAGE } from '../assets/images';
 
 interface ArticleViewProps {
   article: Article;
@@ -148,8 +149,12 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
                   <img
                     src={article.image}
                     alt={article.imageAlt}
-                    referrerPolicy="no-referrer"
                     className="w-full h-full object-cover"
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      target.onerror = null;
+                      target.src = FALLBACK_IMAGE;
+                    }}
                   />
                 </div>
                 <figcaption className="text-xs text-slate-500 italic mt-2.5 text-center">
