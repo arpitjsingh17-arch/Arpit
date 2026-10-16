@@ -75,8 +75,8 @@ export const ARTICLES: Article[] = [
       name: 'Lukas Weismann',
       role: 'Senior European Football Correspondent',
     },
-    image: '/src/assets/images/bayern_trophy_celebration_1791884292478.jpg',
-    imageAlt: 'Silver UEFA Champions League trophy decorated with red ribbons honoring Bayern Munich',
+    image: '/src/assets/images/bayern_ucl_champions_cup_1792117769005.jpg',
+    imageAlt: 'Silver UEFA Champions League trophy decorated with rich red and white ribbons celebrating Bayern Munich six European triumphs',
     imageCaption: 'The coveted European Champion Clubs Cup proudly lifted six times by FC Bayern München.',
     quickAnswerSummary: 'FC Bayern Munich has won 6 UEFA Champions League / European Cup titles (1974, 1975, 1976, 2001, 2013, and 2020), ranking as the joint-third most successful club in European football history alongside Liverpool, trailing only Real Madrid and AC Milan.',
     sections: [
@@ -256,8 +256,8 @@ export const ARTICLES: Article[] = [
       name: 'Maximilian Huber',
       role: 'Cultural Historian & Sports Sociologist',
     },
-    image: '/src/assets/images/bayern_matchday_atmosphere_1791884293931.jpg',
-    imageAlt: 'Passionate Bayern Munich supporters waving flags and singing in the stadium stands',
+    image: '/src/assets/images/bayern_fans_mia_san_mia_1792117789869.jpg',
+    imageAlt: 'Bavarian supporters in the Südkurve proudly holding red scarves displaying the Mia San Mia club motto',
     imageCaption: 'The Bavarian faithful embodying the spirit of "Mia San Mia" in the Allianz Arena stands.',
     quickAnswerSummary: '"Mia San Mia" is a Bavarian dialect phrase translating to "We are who we are" (or "We are we"). For FC Bayern Munich, it signifies supreme self-confidence, unshakeable resilience under pressure, familial solidarity, and an unyielding expectation of victory.',
     sections: [
@@ -346,9 +346,9 @@ export const ARTICLES: Article[] = [
       name: 'Felix Sommer',
       role: 'Head of Match Analysis & UEFA Pro Analyst',
     },
-    image: '/src/assets/images/bayern_tactics_analysis_1791884294854.jpg',
-    imageAlt: 'Football tactical strategy clipboard with detailed pitch player markings and pressing structures',
-    imageCaption: 'The strategic blueprint governing FC Bayern Munich modern possession and pressing game.',
+    image: '/src/assets/images/bayern_tactics_4231_board_1792117769544.jpg',
+    imageAlt: 'Tactical football strategy board with geometric player pitch formations, tactical markers, and 4-2-3-1 pressing instructions',
+    imageCaption: 'The strategic blueprint governing FC Bayern Munich modern 4-2-3-1 possession and counter-pressing game.',
     quickAnswerSummary: 'Bayern Munich operates primarily in a fluid 4-2-3-1 attacking structure that mutates into a 3-2-5 or 2-3-5 in possession, characterized by an ultra-high defensive line, aggressive Gegenpressing within 5 seconds of turnover, and rapid vertical line-breaking passes.',
     sections: [
       {
@@ -437,9 +437,9 @@ export const ARTICLES: Article[] = [
       name: 'Christopher Lindner',
       role: 'Chief Football Data Analyst',
     },
-    image: '/src/assets/images/bayern_tactics_analysis_1791884294854.jpg',
-    imageAlt: 'Tactical planning board analyzing attacking striker movements and finishing zones',
-    imageCaption: 'The analytical breakdown of Harry Kane devastating goalscoring and playmaking metrics.',
+    image: '/src/assets/images/bayern_striker_number_nine_1792117770890.jpg',
+    imageAlt: 'Bayern Munich center-forward wearing the red number 9 jersey celebrating a decisive goal at the Allianz Arena',
+    imageCaption: 'The clinical goalscoring and playmaking mastery of Bayern number 9 talisman Harry Kane.',
     quickAnswerSummary: 'Since joining FC Bayern Munich in August 2023 for a club-record €100 million fee, England captain Harry Kane has broken numerous Bundesliga scoring records, averaging over 1.15 goals per game while simultaneously acting as the team primary creative playmaker.',
     sections: [
       {
@@ -527,9 +527,9 @@ export const ARTICLES: Article[] = [
       name: 'Dietmar Hofer',
       role: 'Club Historian & Archival Researcher',
     },
-    image: '/src/assets/images/bayern_trophy_celebration_1791884292478.jpg',
-    imageAlt: 'Prestigious European silver football trophy commemorating Bayern historic football icons',
-    imageCaption: 'The golden legacy forged by Bayern Munich greatest historical legends over seven decades.',
+    image: '/src/assets/images/bayern_classic_legends_1792118003045.jpg',
+    imageAlt: 'Archival FC Bayern museum gallery wall displaying framed photographs of 1970s legends Franz Beckenbauer and Gerd Müller alongside European trophies',
+    imageCaption: 'The golden legacy forged by Franz Beckenbauer, Gerd Müller, and Bayern legendary pioneers.',
     quickAnswerSummary: 'The greatest legends in FC Bayern Munich history are Franz Beckenbauer ("Der Kaiser"), Gerd Müller ("Der Bomber"), Sepp Maier, Karl-Heinz Rummenigge, Uli Hoeneß, Oliver Kahn ("Der Titan"), Bastian Schweinsteiger ("Fußballgott"), and Thomas Müller.',
     sections: [
       {
@@ -618,9 +618,9 @@ export const ARTICLES: Article[] = [
       name: 'Johannes Schmidt',
       role: 'Bundesliga Senior Analyst',
     },
-    image: '/src/assets/images/bayern_matchday_atmosphere_1791884293931.jpg',
-    imageAlt: 'Fans waving massive red and yellow flags in an electric German football stadium derby',
-    imageCaption: 'The ferocious and electric stadium atmosphere defining modern Der Klassiker showdowns.',
+    image: '/src/assets/images/bayern_der_klassiker_stadium_1792118030282.jpg',
+    imageAlt: 'Packed stadium during a Der Klassiker title clash between Bayern Munich in red and Borussia Dortmund in yellow under night floodlights',
+    imageCaption: 'The ferocious stadium atmosphere and sea of red and yellow defining modern Der Klassiker showdowns.',
     quickAnswerSummary: 'Der Klassiker is the marquee fixture of German football contested between FC Bayern Munich and Borussia Dortmund. Across more than 135 competitive meetings, Bayern leads the historical head-to-head record with over 65 victories.',
     sections: [
       {
@@ -708,9 +708,9 @@ export const ARTICLES: Article[] = [
       name: 'Dr. Florian Eder',
       role: 'Academy scout & Sports Science Specialist',
     },
-    image: '/src/assets/images/bayern_allianz_arena_dusk_1791884292295.jpg',
-    imageAlt: 'Modern state of the art youth football training complex under Bavarian skies',
-    imageCaption: 'The 30-hectare FC Bayern Campus located in northern Munich near the Allianz Arena.',
+    image: '/src/assets/images/bayern_youth_campus_pitches_1792117770666.jpg',
+    imageAlt: 'Modern state-of-the-art youth training pitches and academy mini-stadium at the 30-hectare FC Bayern Campus under Bavarian skies',
+    imageCaption: 'The 30-hectare FC Bayern Campus youth development complex located in northern Munich.',
     quickAnswerSummary: 'Opened in August 2017 with an investment of €70 million, the FC Bayern Campus is a state-of-the-art 30-hectare youth academy complex housing eight pitches, a 2,500-seat stadium, and world-class biomechanical training facilities for ages U9 through U19.',
     sections: [
       {
@@ -797,9 +797,9 @@ export const ARTICLES: Article[] = [
       name: 'Matthias Lindau',
       role: 'Sports Governance & Financial Legal Scholar',
     },
-    image: '/src/assets/images/bayern_matchday_atmosphere_1791884293931.jpg',
-    imageAlt: 'Thousands of passionate football supporters holding scarf banners in full stadium solidarity',
-    imageCaption: 'The democratic voting members of FC Bayern München eV who hold the majority power.',
+    image: '/src/assets/images/bayern_members_agm_voting_1792117961398.jpg',
+    imageAlt: 'Thousands of FC Bayern München eV members holding red voting cards during the annual general meeting Jahreshauptversammlung',
+    imageCaption: 'The democratic voting members of FC Bayern München e.V. exercising their majority voting rights under the 50+1 rule.',
     quickAnswerSummary: 'The German football 50+1 rule mandates that the registered member association (e.V.) must retain at least 50% plus one additional voting share in the professional football club, legally blocking private billionaires or foreign states from taking control.',
     sections: [
       {
@@ -886,9 +886,9 @@ export const ARTICLES: Article[] = [
       name: 'Markus Reitmeier',
       role: 'Editorial Director & UEFA Historian',
     },
-    image: '/src/assets/images/bayern_trophy_celebration_1791884292478.jpg',
-    imageAlt: 'Silver European Cup trophy shining under stadium floodlights celebrating historic treble victories',
-    imageCaption: 'The ultimate symbol of European dominance achieved in both 2013 and 2020 by Bayern.',
+    image: '/src/assets/images/bayern_treble_champions_trophies_1792117770919.jpg',
+    imageAlt: 'The complete European Treble trophy collection: Bundesliga Meisterschale, DFB-Pokal cup, and UEFA Champions League trophy',
+    imageCaption: 'The historic continental treble silverware won by Bayern Munich in both 2012-13 and 2019-20.',
     quickAnswerSummary: 'FC Bayern Munich is one of only two European clubs (alongside FC Barcelona) to have won the prestigious continental treble (domestic league, domestic cup, and UEFA Champions League) twice: first under Jupp Heynckes in 2012-13 and second under Hansi Flick in 2019-20.',
     sections: [
       {

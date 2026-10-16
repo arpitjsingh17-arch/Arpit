@@ -23,8 +23,8 @@ export const Hero: React.FC<HeroProps> = ({
       {/* Background imagery with subtle dark scrim */}
       <div className="absolute inset-0 z-0 opacity-25 mix-blend-luminosity">
         <img
-          src="/src/assets/images/bayern_allianz_arena_dusk_1791884292295.jpg"
-          alt="Atmospheric view of the Allianz Arena stadium at dusk"
+          src="/src/assets/images/bayern_allianz_panoramic_1792117768678.jpg"
+          alt="Atmospheric panoramic view of the illuminated Allianz Arena in Munich"
           className="w-full h-full object-cover object-center"
           loading="eager"
         />
